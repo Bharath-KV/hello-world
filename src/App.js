@@ -7,6 +7,7 @@ import Hello from './components/Hello'
 import Message from './components/Message';
 import Counter from './components/Counter';
 import ParentComponent from './components/ParentComponent';
+import UserGreeting from './components/UserGreeting';
 
 function App() {
   return (
@@ -18,7 +19,8 @@ function App() {
       </Hello> */}
       {/* <Message />
       <Counter addValue='2' /> */}
-      <ParentComponent />
+      {/* <ParentComponent /> */}
+      <UserGreeting />
     </div>
   );
 }
