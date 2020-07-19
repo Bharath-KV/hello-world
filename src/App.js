@@ -1,7 +1,9 @@
 import React from 'react';
 // import logo from './logo.svg';
 import './App.css';
-import PortalDemo from './components/PortalDemo';
+import Hero from './components/Hero';
+import ErrorBoundary from './components/ErrorBoundary';
+// import PortalDemo from './components/PortalDemo';
 // import FRParentInput from './components/FRParentInput';
 // import FocusInput from './components/FocusInput';
 // import Greet from './components/Greet'
@@ -50,7 +52,16 @@ function App() {
       {/* <RefsDemo /> */}
       {/* <FocusInput /> */}
       {/* <FRParentInput /> */}
-      <PortalDemo />
+      {/* <PortalDemo /> */}
+      <ErrorBoundary>
+        <Hero heroName='Ironman' />
+      </ErrorBoundary>
+      <ErrorBoundary>        
+        <Hero heroName='Thor' />
+      </ErrorBoundary>
+      <ErrorBoundary>        
+        <Hero heroName='Joker' />
+      </ErrorBoundary>
     </div>
   );
 }
