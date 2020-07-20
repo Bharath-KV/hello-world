@@ -1,8 +1,12 @@
 import React from 'react';
 // import logo from './logo.svg';
 import './App.css';
-import ClickCounter from './components/ClickCounter';
-import HoverCounter from './components/HoverCounter';
+import ClickCounterTwo from './components/ClickCounterTwo';
+import HoverCounterTwo from './components/HoverCounterTwo';
+import User from './components/User';
+import CounterTwo from './components/CounterTwo';
+// import ClickCounter from './components/ClickCounter';
+// import HoverCounter from './components/HoverCounter';
 // import Hero from './components/Hero';
 // import ErrorBoundary from './components/ErrorBoundary';
 // import PortalDemo from './components/PortalDemo';
@@ -64,8 +68,19 @@ function App() {
       <ErrorBoundary>        
         <Hero heroName='Joker' />
       </ErrorBoundary> */}
-      <ClickCounter name='Bharath' />
-      <HoverCounter />
+      {/* <ClickCounter name='Bharath' />
+      <HoverCounter /> */}
+      {/* <ClickCounterTwo />
+      <HoverCounterTwo /> */}
+      <User render={(isLoggedIn) => isLoggedIn ? 'Bharath' : 'Guest'} /> 
+      <CounterTwo render={(count, incrementCount) => (
+          <ClickCounterTwo count={count} incrementCount={incrementCount} />
+        )} 
+      />
+      <CounterTwo render={(count, incrementCount) => (
+          <HoverCounterTwo count={count} incrementCount={incrementCount} />
+        )} 
+      />
     </div>
   );
 }
