@@ -1,8 +1,10 @@
 import React from 'react';
 // import logo from './logo.svg';
 import './App.css';
-import ComponentC from './components/ComponentC';
-import { UserProvider } from './components/UserContext';
+import PostForm from './components/PostForm';
+// import PostList from './components/PostList';
+// import ComponentC from './components/ComponentC';
+// import { UserProvider } from './components/UserContext';
 // import ClickCounterTwo from './components/ClickCounterTwo';
 // import HoverCounterTwo from './components/HoverCounterTwo';
 // import User from './components/User';
@@ -84,9 +86,11 @@ function App() {
         )} 
       /> */}
       {/* <ComponentC /> */}
-      <UserProvider value='Bharath' >
+      {/* <UserProvider value='Bharath' >
         <ComponentC />
-      </UserProvider>
+      </UserProvider> */}
+      {/* <PostList /> */}
+      <PostForm />
     </div>
   );
 }
