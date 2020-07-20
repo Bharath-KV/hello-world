@@ -1,10 +1,12 @@
 import React from 'react';
 // import logo from './logo.svg';
 import './App.css';
-import ClickCounterTwo from './components/ClickCounterTwo';
-import HoverCounterTwo from './components/HoverCounterTwo';
-import User from './components/User';
-import CounterTwo from './components/CounterTwo';
+import ComponentC from './components/ComponentC';
+import { UserProvider } from './components/UserContext';
+// import ClickCounterTwo from './components/ClickCounterTwo';
+// import HoverCounterTwo from './components/HoverCounterTwo';
+// import User from './components/User';
+// import CounterTwo from './components/CounterTwo';
 // import ClickCounter from './components/ClickCounter';
 // import HoverCounter from './components/HoverCounter';
 // import Hero from './components/Hero';
@@ -72,7 +74,7 @@ function App() {
       <HoverCounter /> */}
       {/* <ClickCounterTwo />
       <HoverCounterTwo /> */}
-      <User render={(isLoggedIn) => isLoggedIn ? 'Bharath' : 'Guest'} /> 
+      {/* <User render={(isLoggedIn) => isLoggedIn ? 'Bharath' : 'Guest'} /> 
       <CounterTwo render={(count, incrementCount) => (
           <ClickCounterTwo count={count} incrementCount={incrementCount} />
         )} 
@@ -80,7 +82,11 @@ function App() {
       <CounterTwo render={(count, incrementCount) => (
           <HoverCounterTwo count={count} incrementCount={incrementCount} />
         )} 
-      />
+      /> */}
+      {/* <ComponentC /> */}
+      <UserProvider value='Bharath' >
+        <ComponentC />
+      </UserProvider>
     </div>
   );
 }
